@@ -15,15 +15,19 @@
     <form>
 
         <!-- user1 -->
-        <div class="formBox">
-            <label for="uName1">User Name1</label>
-            <input type="text" id="uName1" placeholder="uName1"/>
-        </div>
-        <div class="formBox">
-            <label for="desc1">Description1</label>
-            <input type="text" id="desc1" placeholder="Description1"/>
-        </div>
+    <div class="formBox">
+        <label for="uName1">User Name1</label>
+        <input type="text" id="uName1" placeholder="uName1"/>
+    </div>
+    <div class="formBox">
+        <label for="desc1">Description1</label>
+        <textarea type="text" id="desc1" placeholder="Description1"></textarea>
+        
+    </div>
 
+    <div class="formBox">
+        <input type="text" id="dummy1"/>
+    </div>
     <!-- user2 -->
     <div class="formBox">
         <label for="uName2">User Name2</label>
@@ -31,7 +35,10 @@
     </div>
     <div class="formBox">
         <label for="desc2">Description2</label>
-        <input type="text" id="desc2" placeholder="Description2"/>
+        <textarea type="text" id="desc2" placeholder="Description2"></textarea>
+    </div>
+    <div class="formBox">
+        <input type="text" id="dummy2"/>
     </div>
 
 <!-- user3 -->
@@ -41,7 +48,10 @@
 </div>
 <div class="formBox">
     <label for="desc3">Description3</label>
-    <input type="text" id="desc3" placeholder="Description3"/>
+    <textarea type="text" id="desc3" placeholder="Description3"></textarea>
+</div>
+<div class="formBox">
+    <input type="text" id="dummy3"/>
 </div>
 <!-- user4 -->
 <div class="formBox">
@@ -50,7 +60,10 @@
 </div>
 <div class="formBox">
     <label for="desc4">Description4</label>
-    <input type="text" id="desc4" placeholder="Description4"/>
+    <textarea type="text" id="desc4" placeholder="Description4"></textarea>
+</div>
+<div class="formBox">
+    <input type="text" id="dummy4"/>
 </div>
 <!-- user5 -->
 <div class="formBox">
@@ -59,12 +72,15 @@
 </div>
 <div class="formBox">
     <label for="desc5">Description5</label>
-    <input type="text" id="desc5" placeholder="Description5"/>
+    <textarea type="text" id="desc5" placeholder="Description5"></textarea>
+</div>
+<div class="formBox">
+    <input type="text" id="dummy4"/>
 </div>
 <!-- end -->
-        <div class="formBox">
+        <!-- <div class="formBox">
             <button id="btn">Click to Add</button>
-        </div>
+        </div> -->
         <div id="msg">
             <pre></pre>
         </div>
@@ -75,22 +91,32 @@
         const addData = (ev)=>{
            
             let uData = {
-              
+
+                user1Info:{
+                UserName1_id: 1,
                 UserName1: document.getElementById('uName1').value,
                 Description1: document.getElementById('desc1').value,
-
+                },
+                user2Info:{
+                UserName2_id:2 ,
                 UserName2: document.getElementById('uName2').value,
                 Description2: document.getElementById('desc2').value,
-
+                },
+                user3Info:{
+                UserName3_id:3 ,
                 UserName3: document.getElementById('uName3').value,
                 Description3: document.getElementById('desc3').value,
-
+                },
+                user4Info:{
+                UserName4_id:4,
                 UserName4: document.getElementById('uName4').value,
                 Description4: document.getElementById('desc4').value,
-
+                },
+                user5Info:{
+                UserName5_id:5,
                 UserName5: document.getElementById('uName5').value,
                 Description5: document.getElementById('desc5').value
-
+                }
             }
             allData.push(uData);
             //document.forms[0].reset(); 
@@ -104,10 +130,10 @@
             //saving to localStorage
             localStorage.setItem('UserData', JSON.stringify(allData) );
         }
-        document.addEventListener('DOMContentLoaded', ()=>{
-            document.getElementById('btn').addEventListener('click', addData);
+        // document.addEventListener('DOMContentLoaded', ()=>{
+        //     document.getElementById('btn').addEventListener('click', addData);
             
-        });
+        // });
         //Timer...
     window.onload = function() {
 
@@ -125,7 +151,7 @@
     var auto_refresh = setInterval(function() {
         allData = []
         addData();
-    }, 5000);
+    }, 5000);  
 }
 
 
