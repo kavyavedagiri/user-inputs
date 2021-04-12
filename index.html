@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> User Input</title>
+    <style>
+        .formBox{
+            padding: 0.5rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+
+        <!-- user1 -->
+        <div class="formBox">
+            <label for="uName1">User Name1</label>
+            <input type="text" id="uName1" placeholder="uName1"/>
+        </div>
+        <div class="formBox">
+            <label for="desc1">Description1</label>
+            <input type="text" id="desc1" placeholder="Description1"/>
+        </div>
+
+    <!-- user2 -->
+    <div class="formBox">
+        <label for="uName2">User Name2</label>
+        <input type="text" id="uName2" placeholder="uName2"/>
+    </div>
+    <div class="formBox">
+        <label for="desc2">Description2</label>
+        <input type="text" id="desc2" placeholder="Description2"/>
+    </div>
+
+<!-- user3 -->
+<div class="formBox">
+    <label for="uName3">User Name3</label>
+    <input type="text" id="uName3" placeholder="uName3"/>
+</div>
+<div class="formBox">
+    <label for="desc3">Description3</label>
+    <input type="text" id="desc3" placeholder="Description3"/>
+</div>
+<!-- user4 -->
+<div class="formBox">
+    <label for="uName4">User Name4</label>
+    <input type="text" id="uName4" placeholder="uName4"/>
+</div>
+<div class="formBox">
+    <label for="desc4">Description4</label>
+    <input type="text" id="desc4" placeholder="Description4"/>
+</div>
+<!-- user5 -->
+<div class="formBox">
+    <label for="uName5">User Name5</label>
+    <input type="text" id="uName5" placeholder="uName5"/>
+</div>
+<div class="formBox">
+    <label for="desc5">Description5</label>
+    <input type="text" id="desc5" placeholder="Description5"/>
+</div>
+<!-- end -->
+        <div class="formBox">
+            <button id="btn">Click to Add</button>
+        </div>
+        <div id="msg">
+            <pre></pre>
+        </div>
+    </form>
+    <script>
+        let allData = [];
+        
+        const addData = (ev)=>{
+           
+            let uData = {
+              
+                UserName1: document.getElementById('uName1').value,
+                Description1: document.getElementById('desc1').value,
+
+                UserName2: document.getElementById('uName2').value,
+                Description2: document.getElementById('desc2').value,
+
+                UserName3: document.getElementById('uName3').value,
+                Description3: document.getElementById('desc3').value,
+
+                UserName4: document.getElementById('uName4').value,
+                Description4: document.getElementById('desc4').value,
+
+                UserName5: document.getElementById('uName5').value,
+                Description5: document.getElementById('desc5').value
+
+            }
+            allData.push(uData);
+            document.forms[0].reset(); 
+           
+
+            //for display purposes only
+            console.warn('added' , {allData} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(allData, '\t', 2);
+
+            //saving to localStorage
+            localStorage.setItem('UserData', JSON.stringify(allData) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addData);
+        });
+        //Timer...
+    window.onload = function() {
+
+    var x = 5;
+    
+    setInterval(function() {
+    if (x <= 6 && x >= 1) {
+    x--;
+    if (x == 1) {
+    x = 6;
+    }
+    }
+    }, 1000);
+    // Form Submitting after 5s
+    var auto_refresh = setInterval(function() {
+        addData();
+    }, 5000);
+}
+
+
+
+    </script>
+</body>
+</html>
