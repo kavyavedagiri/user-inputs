@@ -93,7 +93,7 @@
 
             }
             allData.push(uData);
-            document.forms[0].reset(); 
+            //document.forms[0].reset(); 
            
 
             //for display purposes only
@@ -106,6 +106,7 @@
         }
         document.addEventListener('DOMContentLoaded', ()=>{
             document.getElementById('btn').addEventListener('click', addData);
+            
         });
         //Timer...
     window.onload = function() {
@@ -122,6 +123,7 @@
     }, 1000);
     // Form Submitting after 5s
     var auto_refresh = setInterval(function() {
+        allData = []
         addData();
     }, 5000);
 }
