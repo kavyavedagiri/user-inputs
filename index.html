@@ -87,28 +87,37 @@
       let allData = [];
 
       const addData = (ev) => {
-        let uData = {
+        let uData1 = {
           UserName1_id: 1,
           UserName1: document.getElementById("uName1").value,
           Description1: document.getElementById("desc1").value,
-
+        };
+        let uData2 = {
           UserName2_id: 2,
           UserName2: document.getElementById("uName2").value,
           Description2: document.getElementById("desc2").value,
-
+        };
+        let uData3 = {
           UserName3_id: 3,
           UserName3: document.getElementById("uName3").value,
           Description3: document.getElementById("desc3").value,
-
+        };
+        let uData4 = {
           UserName4_id: 4,
           UserName4: document.getElementById("uName4").value,
           Description4: document.getElementById("desc4").value,
-
+        };
+        let uData5 = {
           UserName5_id: 5,
           UserName5: document.getElementById("uName5").value,
           Description5: document.getElementById("desc5").value,
         };
-        allData.push(uData);
+
+        allData.push(uData1);
+        allData.push(uData2);
+        allData.push(uData3);
+        allData.push(uData4);
+        allData.push(uData5);
         //document.forms[0].reset();
 
         //for display purposes only
