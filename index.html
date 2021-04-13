@@ -15,11 +15,11 @@
     <form>
       <!-- user1 -->
       <div class="formBox">
-        <label for="uName1">User Name1</label>
+        <label for="uName1">Name</label>
         <input type="text" id="uName1" placeholder="uName1" />
       </div>
       <div class="formBox">
-        <label for="desc1">Description1</label>
+        <label for="desc1">Description</label>
         <textarea type="text" id="desc1" placeholder="Description1"></textarea>
       </div>
 
@@ -28,11 +28,11 @@
       </div>
       <!-- user2 -->
       <div class="formBox">
-        <label for="uName2">User Name2</label>
+        <label for="uName2">Name</label>
         <input type="text" id="uName2" placeholder="uName2" />
       </div>
       <div class="formBox">
-        <label for="desc2">Description2</label>
+        <label for="desc2">Description</label>
         <textarea type="text" id="desc2" placeholder="Description2"></textarea>
       </div>
       <div class="formBox">
@@ -41,11 +41,11 @@
 
       <!-- user3 -->
       <div class="formBox">
-        <label for="uName3">User Name3</label>
+        <label for="uName3">Name</label>
         <input type="text" id="uName3" placeholder="uName3" />
       </div>
       <div class="formBox">
-        <label for="desc3">Description3</label>
+        <label for="desc3">Description</label>
         <textarea type="text" id="desc3" placeholder="Description3"></textarea>
       </div>
       <div class="formBox">
@@ -53,11 +53,11 @@
       </div>
       <!-- user4 -->
       <div class="formBox">
-        <label for="uName4">User Name4</label>
+        <label for="uName4">Name</label>
         <input type="text" id="uName4" placeholder="uName4" />
       </div>
       <div class="formBox">
-        <label for="desc4">Description4</label>
+        <label for="desc4">Description</label>
         <textarea type="text" id="desc4" placeholder="Description4"></textarea>
       </div>
       <div class="formBox">
@@ -65,11 +65,11 @@
       </div>
       <!-- user5 -->
       <div class="formBox">
-        <label for="uName5">User Name5</label>
+        <label for="uName5">Name</label>
         <input type="text" id="uName5" placeholder="uName5" />
       </div>
       <div class="formBox">
-        <label for="desc5">Description5</label>
+        <label for="desc5">Description</label>
         <textarea type="text" id="desc5" placeholder="Description5"></textarea>
       </div>
       <div class="formBox">
@@ -86,31 +86,31 @@
     <script>
       let allData = [];
 
-      const addData = (ev) => {
+      const addData = () => {
         let uData1 = {
-          UserName1_id: 1,
-          UserName1: document.getElementById("uName1").value,
-          Description1: document.getElementById("desc1").value,
+          id:1,
+          name: document.getElementById("uName1").value,
+          description: document.getElementById("desc1").value,
         };
         let uData2 = {
-          UserName2_id: 2,
-          UserName2: document.getElementById("uName2").value,
-          Description2: document.getElementById("desc2").value,
+          id:2,
+          name: document.getElementById("uName2").value,
+          description: document.getElementById("desc2").value,
         };
         let uData3 = {
-          UserName3_id: 3,
-          UserName3: document.getElementById("uName3").value,
-          Description3: document.getElementById("desc3").value,
+          id:3,
+          name: document.getElementById("uName3").value,
+          description: document.getElementById("desc3").value,
         };
         let uData4 = {
-          UserName4_id: 4,
-          UserName4: document.getElementById("uName4").value,
-          Description4: document.getElementById("desc4").value,
+          id:4,
+          name: document.getElementById("uName4").value,
+          description: document.getElementById("desc4").value,
         };
         let uData5 = {
-          UserName5_id: 5,
-          UserName5: document.getElementById("uName5").value,
-          Description5: document.getElementById("desc5").value,
+          id:5,
+          name: document.getElementById("uName5").value,
+          description: document.getElementById("desc5").value,
         };
 
         allData.push(uData1);
